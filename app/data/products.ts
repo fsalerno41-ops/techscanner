@@ -5,10 +5,10 @@ export const products = [
     name: "iPhone 17 Pro Max",
     price: "1189",
     category: "Smartphone",
-    image: "📱",
+    image: "/images/iphone.jpg",
 
     description:
-      "Confronta online il miglior prezzo di iPhone 17 Pro Max.",
+      "Il nuovo iPhone 17 Pro Max con processore ultra veloce e fotocamera professionale.",
 
     stores: [
       {
@@ -19,14 +19,8 @@ export const products = [
 
       {
         name: "eBay",
-        price: "1219",
+        price: "1199",
         url: "https://ebay.it",
-      },
-
-      {
-        name: "Mediaworld",
-        price: "1249",
-        url: "https://mediaworld.it",
       },
     ],
   },
@@ -37,10 +31,10 @@ export const products = [
     name: "RTX 5090 Gaming",
     price: "2099",
     category: "Gaming",
-    image: "🖥️",
+    image: "/images/rtx.jpg",
 
     description:
-      "Trova il prezzo più basso della RTX 5090 Gaming.",
+      "Scheda video NVIDIA RTX 5090 per gaming estremo e AI.",
 
     stores: [
       {
@@ -48,37 +42,25 @@ export const products = [
         price: "2099",
         url: "https://amazon.it",
       },
-
-      {
-        name: "ePrice",
-        price: "2149",
-        url: "https://eprice.it",
-      },
     ],
   },
 
   {
     id: 3,
-    slug: "dyson-v16",
-    name: "Dyson V16",
+    slug: "dyson-v15",
+    name: "Dyson V15",
     price: "699",
-    category: "Elettrodomestici",
-    image: "🧹",
+    category: "Casa",
+    image: "/images/dyson.jpg",
 
     description:
-      "Confronta le offerte online di Dyson V16.",
+      "Aspirapolvere Dyson V15 con potenza elevata e tecnologia laser.",
 
     stores: [
       {
         name: "Amazon",
         price: "699",
         url: "https://amazon.it",
-      },
-
-      {
-        name: "Unieuro",
-        price: "729",
-        url: "https://unieuro.it",
       },
     ],
   },

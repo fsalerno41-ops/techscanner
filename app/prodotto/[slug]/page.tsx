@@ -1,5 +1,6 @@
 import { products } from "../../data/products"
 import { notFound } from "next/navigation"
+import Image from "next/image"
 
 export function generateStaticParams() {
   return products.map((product) => ({
@@ -24,13 +25,17 @@ export default async function ProductPage({
 
   return (
     <main className="min-h-screen bg-zinc-100 text-black">
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
 
           <div className="bg-white rounded-3xl p-12 shadow-sm flex items-center justify-center">
-            <span className="text-9xl">
-              {product.image || "📦"}
-            </span>
+            <Image
+              src={product.image}
+              alt={product.name}
+              width={400}
+              height={400}
+              className="object-contain"
+            />
           </div>
 
           <div>
