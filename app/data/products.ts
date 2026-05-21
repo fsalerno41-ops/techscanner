@@ -2,7 +2,7 @@ export const products = [
   {
     id: 1,
     slug: "iphone-17-pro-max",
-    name: "iPhone 17 Pro Max",
+    name: "iphone 17 Pro Max",
     price: "1189",
     category: "Smartphone",
     image: "/images/iphone.jpg",
@@ -28,7 +28,7 @@ export const products = [
   {
     id: 2,
     slug: "rtx-5090-gaming",
-    name: "RTX 5090 Gaming",
+    name: "rtX 5090 Gaming",
     price: "2099",
     category: "Gaming",
     image: "/images/rtx.jpg",
@@ -48,7 +48,7 @@ export const products = [
   {
     id: 3,
     slug: "dyson-v15",
-    name: "Dyson V15",
+    name: "dyson V15",
     price: "699",
     category: "Casa",
     image: "/images/dyson.jpg",
