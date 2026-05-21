@@ -14,7 +14,7 @@ export const products = [
       {
         name: "Amazon",
         price: "1189",
-        url: "https://amazon.it",
+        url: "https://amzn.to/4dVFpZU",
       },
 
       {
@@ -40,7 +40,7 @@ export const products = [
       {
         name: "Amazon",
         price: "2099",
-        url: "https://amazon.it",
+        url: "https://amzn.to/4dVFpZU",
       },
     ],
   },
@@ -60,7 +60,7 @@ export const products = [
       {
         name: "Amazon",
         price: "699",
-        url: "https://amazon.it",
+        url: "https://amzn.to/4dVFpZU",
       },
     ],
   },
