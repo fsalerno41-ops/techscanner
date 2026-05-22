@@ -1,10 +1,10 @@
 export const products = [
   {
-    id: 1,
-    slug: "iphone-17-pro-max",
-    name: "iPhone 17 Pro Max",
-    image: "/images/iphone.jpg",
-    price: "1189",
+  id: 1,
+  slug: "iphone-17-pro-max",
+  name: "iPhone 17 Pro Max",
+  image: "/images/iphone.jpg",
+  price: "1189",
     category: "Smartphone",
     description:
       "Confronta online il miglior prezzo di iPhone 17 Pro Max.",
