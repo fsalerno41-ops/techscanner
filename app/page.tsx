@@ -1,77 +1,64 @@
-"use client"
-
-import { useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
 import { products } from "./data/products"
 
-export default function Home() {
-  const [search, setSearch] = useState("")
-
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(search.toLowerCase())
-  )
-
+export default function HomePage() {
   return (
     <main className="min-h-screen bg-zinc-100">
-      <section className="bg-black text-white py-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <h1 className="text-7xl font-black">
-            TechScanner 🚀
-          </h1>
 
-          <p className="text-zinc-400 text-xl mt-6 max-w-2xl">
-            Trova il prezzo più basso online per smartphone,
-            gaming ed elettrodomestici.
-          </p>
+      <section className="max-w-7xl mx-auto px-6 py-20">
 
-          <div className="mt-10 relative max-w-2xl">
-            <span className="absolute left-5 top-1/2 -translate-y-1/2 text-2xl">
-              🔍
-            </span>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-            <input
-              type="text"
-              placeholder="Cerca prodotto..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-2xl bg-white px-14 py-5 text-black text-xl shadow-2xl outline-none"
-            />
-          </div>
-        </div>
-      </section>
+          {products.map((product) => (
 
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-8">
-          {filteredProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-white rounded-3xl p-8 shadow-sm"
+              className="bg-white rounded-3xl p-10 shadow-sm hover:shadow-xl transition"
             >
+
+              <div className="relative h-[260px] w-full mb-8">
+
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-contain"
+                />
+
+              </div>
+
               <span className="uppercase text-sm text-zinc-500">
                 {product.category}
               </span>
 
-              <h2 className="text-3xl font-black mt-4">
+              <h2 className="text-5xl font-black mt-4 leading-none">
                 {product.name}
               </h2>
 
-              <p className="text-5xl font-black text-green-600 mt-6">
+              <p className="text-6xl font-black text-green-600 mt-8">
                 €{product.price}
               </p>
 
-              <p className="text-zinc-600 mt-4">
+              <p className="text-zinc-600 text-xl mt-6 leading-relaxed">
                 {product.description}
               </p>
 
-              <a
+              <Link
                 href={`/prodotto/${product.slug}`}
-                className="block text-center mt-8 rounded-2xl bg-black text-white py-4"
+                className="mt-10 block bg-black text-white text-center py-5 rounded-2xl text-xl font-semibold hover:opacity-90 transition"
               >
                 Confronta prezzi
-              </a>
+              </Link>
+
             </div>
+
           ))}
+
         </div>
+
       </section>
+
     </main>
   )
 }
