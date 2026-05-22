@@ -31,13 +31,18 @@ export default async function ProductPage({
         <div className="grid lg:grid-cols-2 gap-16">
 
           <div className="bg-white rounded-3xl p-12 shadow-sm flex items-center justify-center">
-            <Image
-              src={product.image}
-              alt={product.name}
-              width={400}
-              height={400}
-              className="object-contain"
-            />
+
+            <div className="relative w-full h-[500px]">
+
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                className="object-contain"
+              />
+
+            </div>
+
           </div>
 
           <div>
@@ -66,7 +71,7 @@ export default async function ProductPage({
 
             </div>
 
-            <div className="mt-10 space-y-4">
+            <div className="mt-10 space-y-5">
 
               {product.stores?.map((store: any, index: number) => (
 
@@ -74,31 +79,31 @@ export default async function ProductPage({
                   key={index}
                   href={store.url}
                   target="_blank"
-                  className="flex items-center justify-between bg-white rounded-2xl p-6 shadow-sm hover:scale-[1.02] transition"
+                  className="flex items-center justify-between bg-black text-white rounded-3xl p-8 hover:scale-[1.02] transition"
                 >
 
                   <div>
 
-                    <p className="font-bold text-2xl">
+                    <p className="font-bold text-3xl">
                       {store.name}
                     </p>
 
-                    <p className="text-zinc-500">
-                      Vai al negozio
+                    <p className="text-zinc-300 mt-2">
+                      Acquista al miglior prezzo online
                     </p>
 
                   </div>
 
                   <div className="text-right">
 
-                    <p className="text-4xl font-black text-green-600">
+                    <p className="text-5xl font-black text-green-400">
                       €{store.price}
                     </p>
 
                     {index === 0 && (
-                      <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                      <p className="mt-2 text-sm text-green-400">
                         MIGLIOR PREZZO
-                      </span>
+                      </p>
                     )}
 
                   </div>
@@ -109,27 +114,42 @@ export default async function ProductPage({
 
             </div>
 
-            <div className="mt-10 grid grid-cols-3 gap-4">
+            <div className="mt-12 grid grid-cols-3 gap-4">
 
               <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
-                🚚
-                <p className="mt-2 font-semibold">
+
+                <p className="text-4xl">
+                  🚚
+                </p>
+
+                <p className="mt-3 font-semibold">
                   Spedizione veloce
                 </p>
+
               </div>
 
               <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
-                💳
-                <p className="mt-2 font-semibold">
+
+                <p className="text-4xl">
+                  💳
+                </p>
+
+                <p className="mt-3 font-semibold">
                   Miglior prezzo
                 </p>
+
               </div>
 
               <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
-                ⭐
-                <p className="mt-2 font-semibold">
+
+                <p className="text-4xl">
+                  ⭐
+                </p>
+
+                <p className="mt-3 font-semibold">
                   Top prodotto
                 </p>
+
               </div>
 
             </div>
