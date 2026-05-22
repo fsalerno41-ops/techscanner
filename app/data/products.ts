@@ -6,12 +6,23 @@ export const products = [
     image: "/images/iphone.jpg",
     price: "1189",
     category: "Smartphone",
-    description: "Il nuovo top di gamma Apple.",
+    description:
+      "Confronta online il miglior prezzo di iPhone 17 Pro Max.",
     stores: [
       {
         name: "Amazon",
         price: "1189",
         url: "https://amazon.it",
+      },
+      {
+        name: "eBay",
+        price: "1219",
+        url: "https://ebay.it",
+      },
+      {
+        name: "Mediaworld",
+        price: "1249",
+        url: "https://mediaworld.it",
       },
     ],
   },
@@ -23,12 +34,18 @@ export const products = [
     image: "/images/rtx.jpg",
     price: "2499",
     category: "GPU",
-    description: "Scheda video gaming ultra potente.",
+    description:
+      "La scheda video gaming più potente del 2025.",
     stores: [
       {
         name: "Amazon",
         price: "2499",
         url: "https://amazon.it",
+      },
+      {
+        name: "eBay",
+        price: "2599",
+        url: "https://ebay.it",
       },
     ],
   },
@@ -40,12 +57,18 @@ export const products = [
     image: "/images/dyson.jpg",
     price: "699",
     category: "Casa",
-    description: "La migliore scopa elettrica Dyson.",
+    description:
+      "La migliore aspirapolvere Dyson senza fili.",
     stores: [
       {
         name: "Amazon",
         price: "699",
         url: "https://amazon.it",
+      },
+      {
+        name: "Mediaworld",
+        price: "749",
+        url: "https://mediaworld.it",
       },
     ],
   },

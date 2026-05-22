@@ -24,9 +24,11 @@ export default async function ProductPage({
   }
 
   return (
-    <main className="min-h-screen bg-zinc-100 text-black">
+    <main className="min-h-screen bg-zinc-100">
+
       <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+
+        <div className="grid lg:grid-cols-2 gap-16">
 
           <div className="bg-white rounded-3xl p-12 shadow-sm flex items-center justify-center">
             <Image
@@ -39,11 +41,12 @@ export default async function ProductPage({
           </div>
 
           <div>
+
             <span className="uppercase text-sm text-zinc-500">
               {product.category}
             </span>
 
-            <h1 className="text-6xl font-black mt-4">
+            <h1 className="text-6xl font-black mt-4 leading-none">
               {product.name}
             </h1>
 
@@ -52,6 +55,7 @@ export default async function ProductPage({
             </p>
 
             <div className="mt-10 bg-white rounded-3xl p-8 shadow-sm">
+
               <p className="text-sm text-zinc-500">
                 Prezzo più basso trovato
               </p>
@@ -59,28 +63,35 @@ export default async function ProductPage({
               <p className="text-6xl font-black text-green-600 mt-4">
                 €{product.price}
               </p>
+
             </div>
 
             <div className="mt-10 space-y-4">
+
               {product.stores?.map((store: any, index: number) => (
+
                 <a
                   key={index}
                   href={store.url}
                   target="_blank"
                   className="flex items-center justify-between bg-white rounded-2xl p-6 shadow-sm hover:scale-[1.02] transition"
                 >
+
                   <div>
-                    <p className="font-bold text-xl">
+
+                    <p className="font-bold text-2xl">
                       {store.name}
                     </p>
 
                     <p className="text-zinc-500">
                       Vai al negozio
                     </p>
+
                   </div>
 
                   <div className="text-right">
-                    <p className="text-3xl font-black text-green-600">
+
+                    <p className="text-4xl font-black text-green-600">
                       €{store.price}
                     </p>
 
@@ -89,12 +100,17 @@ export default async function ProductPage({
                         MIGLIOR PREZZO
                       </span>
                     )}
+
                   </div>
+
                 </a>
+
               ))}
+
             </div>
 
             <div className="mt-10 grid grid-cols-3 gap-4">
+
               <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
                 🚚
                 <p className="mt-2 font-semibold">
@@ -115,11 +131,15 @@ export default async function ProductPage({
                   Top prodotto
                 </p>
               </div>
+
             </div>
+
           </div>
 
         </div>
+
       </section>
+
     </main>
   )
 }
