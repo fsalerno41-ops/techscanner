@@ -1,10 +1,10 @@
 export const products = [
   {
-  id: 1,
-  slug: "iphone-17-pro-max",
-  name: "iPhone 17 Pro Max",
-  image: "/images/iphone.jpg",
-  price: "1189",
+    id: 1,
+    slug: "iphone-17-pro-max",
+    name: "iPhone 17 Pro Max",
+    image: "/images/iphone.jpg",
+    price: "1189",
     category: "Smartphone",
     description:
       "Confronta online il miglior prezzo di iPhone 17 Pro Max.",
@@ -32,43 +32,33 @@ export const products = [
     slug: "rtx-5090-gaming",
     name: "RTX 5090 Gaming",
     image: "/images/rtx.jpg",
-    price: "2499",
-    category: "GPU",
+    price: "2099",
+    category: "Gaming",
     description:
-      "La scheda video gaming più potente del 2025.",
+      "Trova il prezzo più basso della RTX 5090 Gaming.",
     stores: [
       {
         name: "Amazon",
-        price: "2499",
+        price: "2099",
         url: "https://amazon.it",
-      },
-      {
-        name: "eBay",
-        price: "2599",
-        url: "https://ebay.it",
       },
     ],
   },
 
   {
     id: 3,
-    slug: "dyson-v15",
-    name: "Dyson V15",
+    slug: "dyson-v16",
+    name: "Dyson V16",
     image: "/images/dyson.jpg",
     price: "699",
-    category: "Casa",
+    category: "Elettrodomestici",
     description:
-      "La migliore aspirapolvere Dyson senza fili.",
+      "Confronta le offerte online di Dyson V16.",
     stores: [
       {
         name: "Amazon",
         price: "699",
         url: "https://amazon.it",
-      },
-      {
-        name: "Mediaworld",
-        price: "749",
-        url: "https://mediaworld.it",
       },
     ],
   },
