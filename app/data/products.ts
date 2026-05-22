@@ -2,25 +2,16 @@ export const products = [
   {
     id: 1,
     slug: "iphone-17-pro-max",
-    name: "iphone 17 Pro Max",
+    name: "iPhone 17 Pro Max",
+    image: "/images/iphone.jpg",
     price: "1189",
     category: "Smartphone",
-    image: "/images/iphone.jpg",
-
-    description:
-      "Il nuovo iPhone 17 Pro Max con processore ultra veloce e fotocamera professionale.",
-
+    description: "Il nuovo top di gamma Apple.",
     stores: [
       {
         name: "Amazon",
         price: "1189",
-        url: "https://amzn.to/4dVFpZU",
-      },
-
-      {
-        name: "eBay",
-        price: "1199",
-        url: "https://ebay.it",
+        url: "https://amazon.it",
       },
     ],
   },
@@ -28,19 +19,16 @@ export const products = [
   {
     id: 2,
     slug: "rtx-5090-gaming",
-    name: "rtX 5090 Gaming",
-    price: "2099",
-    category: "Gaming",
+    name: "RTX 5090 Gaming",
     image: "/images/rtx.jpg",
-
-    description:
-      "Scheda video NVIDIA RTX 5090 per gaming estremo e AI.",
-
+    price: "2499",
+    category: "GPU",
+    description: "Scheda video gaming ultra potente.",
     stores: [
       {
         name: "Amazon",
-        price: "2099",
-        url: "https://amzn.to/4dVFpZU",
+        price: "2499",
+        url: "https://amazon.it",
       },
     ],
   },
@@ -48,19 +36,16 @@ export const products = [
   {
     id: 3,
     slug: "dyson-v15",
-    name: "dyson V15",
+    name: "Dyson V15",
+    image: "/images/dyson.jpg",
     price: "699",
     category: "Casa",
-    image: "/images/dyson.jpg",
-
-    description:
-      "Aspirapolvere Dyson V15 con potenza elevata e tecnologia laser.",
-
+    description: "La migliore scopa elettrica Dyson.",
     stores: [
       {
         name: "Amazon",
         price: "699",
-        url: "https://amzn.to/4dVFpZU",
+        url: "https://amazon.it",
       },
     ],
   },
