@@ -5,7 +5,6 @@ import { products } from "./data/products"
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-zinc-100">
-
       <section className="max-w-7xl mx-auto px-6 py-20">
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -14,10 +13,10 @@ export default function HomePage() {
 
             <div
               key={product.id}
-              className="bg-white rounded-3xl p-10 shadow-sm hover:shadow-xl transition"
+              className="bg-white rounded-3xl p-10 shadow-sm"
             >
 
-              <div className="relative h-[260px] w-full mb-8">
+              <div className="relative w-full h-[260px] mb-8">
 
                 <Image
                   src={product.image}
@@ -40,13 +39,13 @@ export default function HomePage() {
                 €{product.price}
               </p>
 
-              <p className="text-zinc-600 text-xl mt-6 leading-relaxed">
+              <p className="text-zinc-600 text-xl mt-6">
                 {product.description}
               </p>
 
               <Link
                 href={`/prodotto/${product.slug}`}
-                className="mt-10 block bg-black text-white text-center py-5 rounded-2xl text-xl font-semibold hover:opacity-90 transition"
+                className="mt-10 block bg-black text-white text-center py-5 rounded-2xl text-xl font-semibold"
               >
                 Confronta prezzi
               </Link>
@@ -58,7 +57,6 @@ export default function HomePage() {
         </div>
 
       </section>
-
     </main>
   )
 }
