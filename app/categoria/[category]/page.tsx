@@ -4,10 +4,15 @@ import Image from "next/image"
 import { notFound } from "next/navigation"
 
 export function generateStaticParams() {
+
   const categories = [
-    ...new Set(products.map((product) =>
-      product.category.toLowerCase()
-    )),
+    ...new Set(
+      products
+        .map((product) =>
+          product.category?.toLowerCase()
+        )
+        .filter(Boolean)
+    ),
   ]
 
   return categories.map((category) => ({
@@ -25,7 +30,8 @@ export default function CategoryPage({
 
   const filteredProducts = products.filter(
     (product) =>
-      product.category.toLowerCase() === category.toLowerCase()
+      product.category?.toLowerCase() ===
+      category.toLowerCase()
   )
 
   if (filteredProducts.length === 0) {
