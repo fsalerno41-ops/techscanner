@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export const metadata = {
   title: "Miglior Smartphone 2026 | TechScanner",
@@ -16,186 +17,220 @@ export default function SmartphoneGuide() {
           Guida TechScanner
         </p>
 
-        <h1 className="text-7xl font-black leading-none mt-6">
+        <h1 className="text-5xl md:text-6xl font-black leading-tight mt-6">
           Miglior Smartphone 2026
         </h1>
 
-        <p className="text-2xl text-zinc-600 mt-8 leading-relaxed">
+        <p className="text-lg md:text-xl text-zinc-600 mt-8 leading-relaxed">
           I migliori smartphone del 2026 per fotocamera,
           gaming, autonomia e qualità prezzo.
         </p>
 
-        <div className="mt-16 bg-white rounded-3xl p-10 shadow-sm">
+        <div className="mt-16 bg-white rounded-3xl overflow-hidden shadow-sm">
 
-          <p className="text-sm uppercase tracking-widest text-zinc-500">
-            Migliore premium
-          </p>
+          <div className="relative h-[350px]">
 
-          <h2 className="text-5xl font-black mt-4">
-            iPhone 17 Pro Max
-          </h2>
+            <Image
+              src="/images/iphone-guide.jpg"
+              alt="iPhone 17 Pro Max"
+              fill
+              className="object-cover"
+            />
 
-          <p className="text-zinc-600 text-xl leading-relaxed mt-6">
-            iPhone 17 Pro Max è il miglior smartphone premium
-            del 2026 grazie a prestazioni eccezionali,
-            autonomia elevata e fotocamere professionali.
-          </p>
+          </div>
 
-          <ul className="mt-8 space-y-4 text-lg">
+          <div className="p-10">
 
-            <li>✅ Display OLED premium</li>
-            <li>✅ Prestazioni gaming top</li>
-            <li>✅ Fotocamera professionale</li>
-            <li>✅ Batteria migliorata</li>
+            <p className="text-sm uppercase tracking-widest text-zinc-500">
+              Migliore premium
+            </p>
 
-          </ul>
+            <h2 className="text-4xl font-black mt-4">
+              iPhone 17 Pro Max
+            </h2>
 
-          <Link
-            href="/prodotto/iphone-17-pro-max"
-            className="mt-10 inline-block bg-black text-white px-8 py-5 rounded-2xl text-lg font-semibold hover:scale-[1.02] transition"
-          >
-            Confronta prezzi
-          </Link>
+            <p className="text-zinc-600 text-lg leading-relaxed mt-6">
+              iPhone 17 Pro Max è il miglior smartphone premium
+              del 2026 grazie a prestazioni eccezionali,
+              autonomia elevata e fotocamere professionali.
+            </p>
 
-        </div>
+            <ul className="mt-8 space-y-3 text-base">
 
-        <div className="mt-10 bg-white rounded-3xl p-10 shadow-sm">
+              <li>✅ Display OLED premium</li>
+              <li>✅ Prestazioni gaming top</li>
+              <li>✅ Fotocamera professionale</li>
+              <li>✅ Batteria migliorata</li>
 
-          <p className="text-sm uppercase tracking-widest text-zinc-500">
-            Miglior Android
-          </p>
+            </ul>
 
-          <h2 className="text-5xl font-black mt-4">
-            Samsung Galaxy Ultra
-          </h2>
+            <Link
+              href="/prodotto/iphone-17-pro-max"
+              className="mt-10 inline-block bg-black text-white px-8 py-4 rounded-2xl font-semibold hover:scale-[1.02] transition"
+            >
+              Confronta prezzi
+            </Link>
 
-          <p className="text-zinc-600 text-xl leading-relaxed mt-6">
-            Il miglior smartphone Android del 2026 per
-            multitasking, fotografia e produttività.
-          </p>
-
-          <ul className="mt-8 space-y-4 text-lg">
-
-            <li>✅ Zoom incredibile</li>
-            <li>✅ Display AMOLED top gamma</li>
-            <li>✅ Autonomia eccellente</li>
-
-          </ul>
+          </div>
 
         </div>
 
-        <div className="mt-10 bg-white rounded-3xl p-10 shadow-sm">
+        <div className="mt-10 bg-white rounded-3xl overflow-hidden shadow-sm">
 
-          <p className="text-sm uppercase tracking-widest text-zinc-500">
-            Miglior qualità prezzo
-          </p>
+          <div className="relative h-[350px]">
 
-          <h2 className="text-5xl font-black mt-4">
-            Google Pixel
-          </h2>
+            <Image
+              src="/images/samsung-guide.jpg"
+              alt="Samsung Galaxy Ultra"
+              fill
+              className="object-cover"
+            />
 
-          <p className="text-zinc-600 text-xl leading-relaxed mt-6">
-            Uno degli smartphone più equilibrati del 2026
-            grazie a ottime fotocamere e software fluido.
-          </p>
+          </div>
 
-        </div>
+          <div className="p-10">
 
-        <div className="mt-10 bg-white rounded-3xl p-10 shadow-sm">
+            <p className="text-sm uppercase tracking-widest text-zinc-500">
+              Miglior Android
+            </p>
 
-          <p className="text-sm uppercase tracking-widest text-zinc-500">
-            Miglior gaming phone
-          </p>
+            <h2 className="text-4xl font-black mt-4">
+              Samsung Galaxy Ultra
+            </h2>
 
-          <h2 className="text-5xl font-black mt-4">
-            ASUS ROG Phone
-          </h2>
+            <p className="text-zinc-600 text-lg leading-relaxed mt-6">
+              Il miglior smartphone Android del 2026 per
+              multitasking, fotografia e produttività.
+            </p>
 
-          <p className="text-zinc-600 text-xl leading-relaxed mt-6">
-            Lo smartphone perfetto per gaming competitivo,
-            FPS elevati e raffreddamento avanzato.
-          </p>
-
-          <ul className="mt-8 space-y-4 text-lg">
-
-            <li>✅ Prestazioni gaming incredibili</li>
-            <li>✅ Display 165Hz</li>
-            <li>✅ Batteria enorme</li>
-
-          </ul>
+          </div>
 
         </div>
 
-        <div className="mt-10 bg-white rounded-3xl p-10 shadow-sm">
+        <div className="mt-10 bg-white rounded-3xl overflow-hidden shadow-sm">
 
-          <p className="text-sm uppercase tracking-widest text-zinc-500">
-            Miglior batteria
-          </p>
+          <div className="relative h-[350px]">
 
-          <h2 className="text-5xl font-black mt-4">
-            OnePlus 13 Pro
-          </h2>
+            <Image
+              src="/images/pixel-guide.jpg"
+              alt="Google Pixel"
+              fill
+              className="object-cover"
+            />
 
-          <p className="text-zinc-600 text-xl leading-relaxed mt-6">
-            Smartphone ideale per autonomia e ricarica ultra rapida.
-          </p>
+          </div>
 
-          <ul className="mt-8 space-y-4 text-lg">
+          <div className="p-10">
 
-            <li>✅ Batteria lunga durata</li>
-            <li>✅ Ricarica velocissima</li>
-            <li>✅ Ottimo display AMOLED</li>
+            <p className="text-sm uppercase tracking-widest text-zinc-500">
+              Miglior qualità prezzo
+            </p>
 
-          </ul>
+            <h2 className="text-4xl font-black mt-4">
+              Google Pixel
+            </h2>
 
-        </div>
+            <p className="text-zinc-600 text-lg leading-relaxed mt-6">
+              Uno degli smartphone più equilibrati del 2026
+              grazie a ottime fotocamere e software fluido.
+            </p>
 
-        <div className="mt-10 bg-white rounded-3xl p-10 shadow-sm">
-
-          <p className="text-sm uppercase tracking-widest text-zinc-500">
-            Miglior fascia media
-          </p>
-
-          <h2 className="text-5xl font-black mt-4">
-            Xiaomi Redmi Note
-          </h2>
-
-          <p className="text-zinc-600 text-xl leading-relaxed mt-6">
-            Uno dei migliori smartphone economici del 2026
-            per rapporto qualità prezzo.
-          </p>
-
-          <ul className="mt-8 space-y-4 text-lg">
-
-            <li>✅ Prezzo competitivo</li>
-            <li>✅ Buona autonomia</li>
-            <li>✅ Ottime prestazioni quotidiane</li>
-
-          </ul>
+          </div>
 
         </div>
 
-        <div className="mt-10 bg-white rounded-3xl p-10 shadow-sm">
+        <div className="mt-10 bg-white rounded-3xl overflow-hidden shadow-sm">
 
-          <h2 className="text-5xl font-black">
-            Come scegliere uno smartphone nel 2026
-          </h2>
+          <div className="relative h-[350px]">
 
-          <p className="text-zinc-600 text-xl leading-relaxed mt-8">
-            Prima di acquistare uno smartphone bisogna valutare:
-            qualità della fotocamera, autonomia,
-            processore, aggiornamenti software e qualità prezzo.
-          </p>
+            <Image
+              src="/images/rog-guide.jpg"
+              alt="ASUS ROG Phone"
+              fill
+              className="object-cover"
+            />
 
-          <p className="text-zinc-600 text-xl leading-relaxed mt-6">
-            Gli smartphone premium sono ideali per gaming,
-            video, fotografia e utilizzo professionale.
-          </p>
+          </div>
 
-          <p className="text-zinc-600 text-xl leading-relaxed mt-6">
-            Gli smartphone di fascia media invece offrono
-            il miglior equilibrio tra prezzo e prestazioni.
-          </p>
+          <div className="p-10">
+
+            <p className="text-sm uppercase tracking-widest text-zinc-500">
+              Miglior gaming phone
+            </p>
+
+            <h2 className="text-4xl font-black mt-4">
+              ASUS ROG Phone
+            </h2>
+
+            <p className="text-zinc-600 text-lg leading-relaxed mt-6">
+              Lo smartphone perfetto per gaming competitivo,
+              FPS elevati e raffreddamento avanzato.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div className="mt-10 bg-white rounded-3xl overflow-hidden shadow-sm">
+
+          <div className="relative h-[350px]">
+
+            <Image
+              src="/images/oneplus-guide.jpg"
+              alt="OnePlus 13 Pro"
+              fill
+              className="object-cover"
+            />
+
+          </div>
+
+          <div className="p-10">
+
+            <p className="text-sm uppercase tracking-widest text-zinc-500">
+              Miglior batteria
+            </p>
+
+            <h2 className="text-4xl font-black mt-4">
+              OnePlus 13 Pro
+            </h2>
+
+            <p className="text-zinc-600 text-lg leading-relaxed mt-6">
+              Smartphone ideale per autonomia e ricarica ultra rapida.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div className="mt-10 bg-white rounded-3xl overflow-hidden shadow-sm">
+
+          <div className="relative h-[350px]">
+
+            <Image
+              src="/images/xiaomi-guide.jpg"
+              alt="Xiaomi Redmi Note"
+              fill
+              className="object-cover"
+            />
+
+          </div>
+
+          <div className="p-10">
+
+            <p className="text-sm uppercase tracking-widest text-zinc-500">
+              Miglior fascia media
+            </p>
+
+            <h2 className="text-4xl font-black mt-4">
+              Xiaomi Redmi Note
+            </h2>
+
+            <p className="text-zinc-600 text-lg leading-relaxed mt-6">
+              Uno dei migliori smartphone economici del 2026
+              per rapporto qualità prezzo.
+            </p>
+
+          </div>
 
         </div>
 
