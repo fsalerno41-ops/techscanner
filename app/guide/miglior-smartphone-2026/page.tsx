@@ -103,6 +103,80 @@ export default function SmartphoneGuide() {
 
         <div className="mt-10 bg-white rounded-3xl p-10 shadow-sm">
 
+          <p className="text-sm uppercase tracking-widest text-zinc-500">
+            Miglior gaming phone
+          </p>
+
+          <h2 className="text-5xl font-black mt-4">
+            ASUS ROG Phone
+          </h2>
+
+          <p className="text-zinc-600 text-xl leading-relaxed mt-6">
+            Lo smartphone perfetto per gaming competitivo,
+            FPS elevati e raffreddamento avanzato.
+          </p>
+
+          <ul className="mt-8 space-y-4 text-lg">
+
+            <li>✅ Prestazioni gaming incredibili</li>
+            <li>✅ Display 165Hz</li>
+            <li>✅ Batteria enorme</li>
+
+          </ul>
+
+        </div>
+
+        <div className="mt-10 bg-white rounded-3xl p-10 shadow-sm">
+
+          <p className="text-sm uppercase tracking-widest text-zinc-500">
+            Miglior batteria
+          </p>
+
+          <h2 className="text-5xl font-black mt-4">
+            OnePlus 13 Pro
+          </h2>
+
+          <p className="text-zinc-600 text-xl leading-relaxed mt-6">
+            Smartphone ideale per autonomia e ricarica ultra rapida.
+          </p>
+
+          <ul className="mt-8 space-y-4 text-lg">
+
+            <li>✅ Batteria lunga durata</li>
+            <li>✅ Ricarica velocissima</li>
+            <li>✅ Ottimo display AMOLED</li>
+
+          </ul>
+
+        </div>
+
+        <div className="mt-10 bg-white rounded-3xl p-10 shadow-sm">
+
+          <p className="text-sm uppercase tracking-widest text-zinc-500">
+            Miglior fascia media
+          </p>
+
+          <h2 className="text-5xl font-black mt-4">
+            Xiaomi Redmi Note
+          </h2>
+
+          <p className="text-zinc-600 text-xl leading-relaxed mt-6">
+            Uno dei migliori smartphone economici del 2026
+            per rapporto qualità prezzo.
+          </p>
+
+          <ul className="mt-8 space-y-4 text-lg">
+
+            <li>✅ Prezzo competitivo</li>
+            <li>✅ Buona autonomia</li>
+            <li>✅ Ottime prestazioni quotidiane</li>
+
+          </ul>
+
+        </div>
+
+        <div className="mt-10 bg-white rounded-3xl p-10 shadow-sm">
+
           <h2 className="text-5xl font-black">
             Come scegliere uno smartphone nel 2026
           </h2>
