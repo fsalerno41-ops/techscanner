@@ -1,162 +1,184 @@
-import { products } from "../../data/products"
+import { products } from "@/app/data/products"
 import { notFound } from "next/navigation"
 import Image from "next/image"
+import Link from "next/link"
+import type { Metadata } from "next"
+
+type Props = {
+  params: {
+    slug: string
+  }
+}
 
 export function generateStaticParams() {
+
   return products.map((product) => ({
     slug: product.slug,
   }))
 }
 
-export default async function ProductPage({
+export async function generateMetadata({
   params,
-}: {
-  params: Promise<{ slug: string }>
-}) {
-  const { slug } = await params
+}: Props): Promise<Metadata> {
 
   const product = products.find(
-    (p) => p.slug === slug
+    (product) => product.slug === params.slug
+  )
+
+  if (!product) {
+    return {
+      title: "Prodotto non trovato",
+    }
+  }
+
+  return {
+    title: `${product.name} | TechScanner`,
+    description: product.description,
+
+    openGraph: {
+      title: product.name,
+      description: product.description,
+      images: [
+        {
+          url: product.image,
+        },
+      ],
+    },
+  }
+}
+
+export default function ProductPage({
+  params,
+}: Props) {
+
+  const product = products.find(
+    (product) => product.slug === params.slug
   )
 
   if (!product) {
     notFound()
   }
 
+  const relatedProducts = products.filter(
+    (item) =>
+      item.category === product.category &&
+      item.id !== product.id
+  )
+
   return (
     <main className="min-h-screen bg-zinc-100">
 
       <section className="max-w-7xl mx-auto px-6 py-20">
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <Link
+          href={`/categoria/${product.category.toLowerCase()}`}
+          className="text-zinc-500 hover:text-black transition"
+        >
+          ← Torna alla categoria
+        </Link>
 
-          <div className="bg-white rounded-3xl p-12 shadow-sm flex items-center justify-center">
+        <div className="grid lg:grid-cols-2 gap-20 mt-10">
 
-            <div className="relative w-full h-[500px]">
+          <div className="bg-white rounded-3xl p-10 relative min-h-[600px]">
 
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                className="object-contain"
-              />
-
-            </div>
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              className="object-contain p-10"
+              priority
+            />
 
           </div>
 
           <div>
 
-            <span className="uppercase text-sm text-zinc-500">
+            <p className="uppercase tracking-widest text-sm text-zinc-500">
               {product.category}
-            </span>
+            </p>
 
-            <h1 className="text-6xl font-black mt-4 leading-none">
+            <h1 className="text-6xl font-black mt-4 leading-tight">
               {product.name}
             </h1>
 
-            <p className="text-zinc-600 text-xl mt-8 leading-relaxed">
+            <p className="text-green-600 text-7xl font-black mt-8">
+              €{product.price}
+            </p>
+
+            <p className="text-zinc-600 text-xl leading-relaxed mt-10">
               {product.description}
             </p>
 
-            <div className="mt-10 bg-white rounded-3xl p-8 shadow-sm">
+            <div className="flex gap-4 mt-12">
 
-              <p className="text-sm text-zinc-500">
-                Prezzo più basso trovato
-              </p>
+              <button className="bg-black text-white px-8 py-5 rounded-2xl font-semibold hover:scale-105 transition">
+                Confronta prezzi
+              </button>
 
-              <p className="text-6xl font-black text-green-600 mt-4">
-                €{product.price}
-              </p>
-
-            </div>
-
-            <div className="mt-10 space-y-5">
-
-              {product.stores?.map((store: any, index: number) => (
-
-                <a
-                  key={index}
-                  href={store.url}
-                  target="_blank"
-                  className="flex items-center justify-between bg-black text-white rounded-3xl p-8 hover:scale-[1.02] transition"
-                >
-
-                  <div>
-
-                    <p className="font-bold text-3xl">
-                      {store.name}
-                    </p>
-
-                    <p className="text-zinc-300 mt-2">
-                      Acquista al miglior prezzo online
-                    </p>
-
-                  </div>
-
-                  <div className="text-right">
-
-                    <p className="text-5xl font-black text-green-400">
-                      €{store.price}
-                    </p>
-
-                    {index === 0 && (
-                      <p className="mt-2 text-sm text-green-400">
-                        MIGLIOR PREZZO
-                      </p>
-                    )}
-
-                  </div>
-
-                </a>
-
-              ))}
-
-            </div>
-
-            <div className="mt-12 grid grid-cols-3 gap-4">
-
-              <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
-
-                <p className="text-4xl">
-                  🚚
-                </p>
-
-                <p className="mt-3 font-semibold">
-                  Spedizione veloce
-                </p>
-
-              </div>
-
-              <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
-
-                <p className="text-4xl">
-                  💳
-                </p>
-
-                <p className="mt-3 font-semibold">
-                  Miglior prezzo
-                </p>
-
-              </div>
-
-              <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
-
-                <p className="text-4xl">
-                  ⭐
-                </p>
-
-                <p className="mt-3 font-semibold">
-                  Top prodotto
-                </p>
-
-              </div>
+              <button className="bg-white border border-zinc-300 px-8 py-5 rounded-2xl font-semibold hover:bg-zinc-50 transition">
+                Preferiti
+              </button>
 
             </div>
 
           </div>
 
         </div>
+
+        {relatedProducts.length > 0 && (
+
+          <div className="mt-32">
+
+            <h2 className="text-4xl font-black">
+              Prodotti correlati
+            </h2>
+
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mt-12">
+
+              {relatedProducts.map((item) => (
+
+                <Link
+                  key={item.id}
+                  href={`/prodotto/${item.slug}`}
+                  className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition"
+                >
+
+                  <div className="relative h-[250px] bg-zinc-50">
+
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      className="object-contain p-8"
+                    />
+
+                  </div>
+
+                  <div className="p-8">
+
+                    <p className="uppercase text-sm tracking-widest text-zinc-500">
+                      {item.category}
+                    </p>
+
+                    <h3 className="text-3xl font-black mt-3">
+                      {item.name}
+                    </h3>
+
+                    <p className="text-green-600 text-4xl font-black mt-6">
+                      €{item.price}
+                    </p>
+
+                  </div>
+
+                </Link>
+
+              ))}
+
+            </div>
+
+          </div>
+
+        )}
 
       </section>
 
