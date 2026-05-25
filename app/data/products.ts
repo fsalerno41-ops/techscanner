@@ -2,145 +2,82 @@ export const products = [
 
   {
     id: 1,
-    slug: "iphone-17-pro-max",
-    name: "iPhone 17 Pro Max",
-    image: "/images/iphone.jpg",
-    price: "1189",
-    category: "Smartphone",
-    description:
-      "Confronta online il miglior prezzo di iPhone 17 Pro Max.",
-    stores: [
-      {
-        name: "Amazon",
-        price: "1189",
-        url: "https://amazon.it",
-      },
-      {
-        name: "eBay",
-        price: "1219",
-        url: "https://ebay.it",
-      },
-      {
-        name: "Mediaworld",
-        price: "1249",
-        url: "https://mediaworld.it",
-      },
-    ],
+    slug: "iphone-15",
+    name: "iPhone 15",
+    category: "smartphone",
+    image: "/iphone.png",
+    price: 999,
+    description: "Il nuovo iPhone 15 con chip A16 Bionic e fotocamera avanzata.",
   },
 
   {
     id: 2,
-    slug: "rtx-5090-gaming",
-    name: "RTX 5090 Gaming",
-    image: "/images/rtx.jpg",
-    price: "2499",
-    category: "GPU",
-    description:
-      "La scheda video gaming più potente del 2026.",
-    stores: [
-      {
-        name: "Amazon",
-        price: "2499",
-        url: "https://amazon.it",
-      },
-      {
-        name: "eBay",
-        price: "2599",
-        url: "https://ebay.it",
-      },
-    ],
+    slug: "galaxy-s24",
+    name: "Samsung Galaxy S24",
+    category: "smartphone",
+    image: "/galaxy-s24.png",
+    price: 949,
+    description: "Smartphone Samsung flagship con display AMOLED ultra fluido.",
   },
 
   {
     id: 3,
-    slug: "dyson-v15",
-    name: "Dyson V15",
-    image: "/images/dyson.jpg",
-    price: "699",
-    category: "Casa",
-    description:
-      "La migliore aspirapolvere Dyson senza fili.",
-    stores: [
-      {
-        name: "Amazon",
-        price: "699",
-        url: "https://amazon.it",
-      },
-      {
-        name: "Mediaworld",
-        price: "749",
-        url: "https://mediaworld.it",
-      },
-    ],
+    slug: "playstation-5",
+    name: "PlayStation 5",
+    category: "gaming",
+    image: "/ps5.png",
+    price: 549,
+    description: "Console Sony next-gen con SSD ultra veloce e ray tracing.",
   },
 
   {
     id: 4,
-    slug: "macbook-pro-m4",
-    name: "MacBook Pro M4",
-    image: "/images/macbook.jpg",
-    price: "2199",
-    category: "Laptop",
-    description:
-      "Confronta online il miglior prezzo del MacBook Pro M4.",
-    stores: [
-      {
-        name: "Amazon",
-        price: "2199",
-        url: "https://amazon.it",
-      },
-      {
-        name: "Unieuro",
-        price: "2249",
-        url: "https://unieuro.it",
-      },
-    ],
+    slug: "xbox-series-x",
+    name: "Xbox Series X",
+    category: "gaming",
+    image: "/xbox-series-x.png",
+    price: 529,
+    description: "Console Microsoft ad alte prestazioni per gaming 4K.",
   },
 
   {
     id: 5,
-    slug: "playstation-5",
-    name: "PlayStation 5",
-    image: "/images/ps5.jpg",
-    price: "499",
-    category: "Gaming",
-    description:
-      "Trova il miglior prezzo della PlayStation 5.",
-    stores: [
-      {
-        name: "Amazon",
-        price: "499",
-        url: "https://amazon.it",
-      },
-      {
-        name: "Mediaworld",
-        price: "529",
-        url: "https://mediaworld.it",
-      },
-    ],
+    slug: "macbook-air-m3",
+    name: "MacBook Air M3",
+    category: "laptop",
+    image: "/macbook-air-m3.png",
+    price: 1399,
+    description: "Laptop Apple ultra sottile con chip M3 di ultima generazione.",
   },
 
   {
     id: 6,
-    slug: "samsung-odyssey-g9",
-    name: "Samsung Odyssey G9",
-    image: "/images/g9.jpg",
-    price: "1299",
-    category: "Monitor",
-    description:
-      "Il monitor ultrawide gaming Samsung Odyssey G9.",
-    stores: [
-      {
-        name: "Amazon",
-        price: "1299",
-        url: "https://amazon.it",
-      },
-      {
-        name: "eBay",
-        price: "1349",
-        url: "https://ebay.it",
-      },
-    ],
+    slug: "dell-xps-15",
+    name: "Dell XPS 15",
+    category: "laptop",
+    image: "/dell-xps-15.png",
+    price: 1899,
+    description: "Notebook premium Dell con display InfinityEdge e Intel Core Ultra.",
+  },
+
+  {
+    id: 7,
+    slug: "lg-ultragear-27",
+    name: "LG UltraGear 27",
+    category: "monitor",
+    image: "/lg-ultragear.png",
+    price: 399,
+    description: "Monitor gaming LG 27 pollici QHD 144Hz.",
+  },
+
+  {
+    id: 8,
+    slug: "samsung-odyssey-g5",
+    name: "Samsung Odyssey G5",
+    category: "monitor",
+    image: "/odyssey-g5.png",
+    price: 349,
+    description: "Monitor curvo Samsung ideale per gaming immersivo.",
   },
 
 ]
