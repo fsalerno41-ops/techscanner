@@ -12,9 +12,11 @@ type Props = {
 
 export function generateStaticParams() {
 
-  return products.map((product) => ({
-    slug: product.slug,
-  }))
+  return products
+    .filter((product) => product?.slug)
+    .map((product) => ({
+      slug: String(product.slug),
+    }))
 }
 
 export async function generateMetadata({
@@ -22,7 +24,9 @@ export async function generateMetadata({
 }: Props): Promise<Metadata> {
 
   const product = products.find(
-    (product) => product.slug === params.slug
+    (product) =>
+      String(product.slug || "") ===
+      String(params.slug || "")
   )
 
   if (!product) {
@@ -33,14 +37,14 @@ export async function generateMetadata({
 
   return {
     title: `${product.name} | TechScanner`,
-    description: product.description,
+    description: String(product.description || ""),
 
     openGraph: {
-      title: product.name,
-      description: product.description,
+      title: String(product.name || ""),
+      description: String(product.description || ""),
       images: [
         {
-          url: product.image,
+          url: String(product.image || ""),
         },
       ],
     },
@@ -52,18 +56,24 @@ export default function ProductPage({
 }: Props) {
 
   const product = products.find(
-    (product) => product.slug === params.slug
+    (product) =>
+      String(product.slug || "") ===
+      String(params.slug || "")
   )
 
   if (!product) {
     notFound()
   }
 
-  const relatedProducts = products.filter(
-    (item) =>
-      item.category === product.category &&
+  const relatedProducts = products.filter((item) => {
+
+    return (
+      String(item.category || "") ===
+        String(product.category || "") &&
+
       item.id !== product.id
-  )
+    )
+  })
 
   return (
     <main className="min-h-screen bg-zinc-100">
@@ -71,7 +81,9 @@ export default function ProductPage({
       <section className="max-w-7xl mx-auto px-6 py-20">
 
         <Link
-          href={`/categoria/${product.category.toLowerCase()}`}
+          href={`/categoria/${String(
+            product.category || ""
+          ).toLowerCase()}`}
           className="text-zinc-500 hover:text-black transition"
         >
           ← Torna alla categoria
@@ -82,8 +94,8 @@ export default function ProductPage({
           <div className="bg-white rounded-3xl p-10 relative min-h-[600px]">
 
             <Image
-              src={product.image}
-              alt={product.name}
+              src={String(product.image || "/placeholder.png")}
+              alt={String(product.name || "Prodotto")}
               fill
               className="object-contain p-10"
               priority
@@ -146,8 +158,8 @@ export default function ProductPage({
                   <div className="relative h-[250px] bg-zinc-50">
 
                     <Image
-                      src={item.image}
-                      alt={item.name}
+                      src={String(item.image || "/placeholder.png")}
+                      alt={String(item.name || "Prodotto")}
                       fill
                       className="object-contain p-8"
                     />
